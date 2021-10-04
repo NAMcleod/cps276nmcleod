@@ -1,4 +1,7 @@
 <?php
+/*
+This text creates a nested list of 4, with 5 items under each
+*/
     $output = "<ul>";
 
     for($i = 1; $i < 5; $i++) //outer loop::print 1, 2, 3, 4.

@@ -1,4 +1,7 @@
 <?php
+/*
+This script creates a webpage with text repeated 3x using a for loop to concatenate text. text is echoed in body.
+*/
 
 //title of page
 $titleText = "Project2b";
