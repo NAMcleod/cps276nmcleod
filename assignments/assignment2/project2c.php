@@ -1,9 +1,9 @@
 <?php
 
-$rows = 15; //number of cells height
-$cols = 5;  //number of cells across
+//$rows = 15; //number of cells height
+//$cols = 5;  //number of cells across
 
-function makeTable($rows, $cols)  
+function makeTable($rows = 15, $cols = 5)  
 {
     echo "<table border=1>";
         for ($i = 1; $i <= $rows; $i++)
@@ -20,6 +20,8 @@ function makeTable($rows, $cols)
 }
 
 ?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,6 +33,6 @@ function makeTable($rows, $cols)
     <title>Project 2c</title>
 <main>
 <?php
-    makeTable($rows, $cols); //function call creates table
+    makeTable(); //function call creates table
 ?> 
 </head>
