@@ -1,7 +1,7 @@
 <?php
 if (count($_POST) > 0)
 {
-    require_once "fileUploadProc.php";
+    require_once "classes/fileUploadProc.php";
     $fileUploadProcClass = new fileUploadProc();
     $output = $fileUploadProcClass->addFile();
     //echo $output;

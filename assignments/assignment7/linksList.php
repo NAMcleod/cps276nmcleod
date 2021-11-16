@@ -1,7 +1,7 @@
 <?php
 
 
-require_once "listFilesProc.php";
+require_once "classes/listFilesProc.php";
 $listFilesProcClass = new listFilesProc();
 $output = $listFilesProcClass->getFiles();
 
