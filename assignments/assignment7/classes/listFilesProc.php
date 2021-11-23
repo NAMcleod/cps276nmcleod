@@ -18,7 +18,7 @@ class listFilesProc extends PdoMethods
 		else {
 			if(count($records) != 0)
             {
-                    return $this->createList($records);
+                return $this->createList($records);
 			}
 			else 
             {
@@ -31,7 +31,7 @@ class listFilesProc extends PdoMethods
     {
         $list = '<ul>';
 		foreach ($records as $row){
-			$list .= "<li><a href='../pdfPath/newsletterorform1.pdf'>{$row['file_name']}</a></li>";
+			$list .= "<li><a href='pdfPath/newsletterorform1.pdf'>{$row['file_name']}</a></li>";
 		}
 		$list .= '</ul>';
 		return $list;
