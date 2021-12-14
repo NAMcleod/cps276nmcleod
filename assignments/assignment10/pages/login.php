@@ -71,8 +71,9 @@ function login()
             $_SESSION['access'] = 'granted';
             $_SESSION['status'] = $row['status'];
 
-            header('location: index.php?page=welcome');
+
             $match = TRUE;
+            header('location: index.php?page=welcome');
           }
         }
       }
