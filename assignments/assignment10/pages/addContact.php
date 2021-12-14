@@ -13,13 +13,7 @@ function init()
   {
     
     /*THIS METHODS TAKE THE POST ARRAY AND THE ELEMENTS ARRAY (SEE BELOW) AND PASSES THEM TO THE VALIDATION FORM METHOD OF THE STICKY FORM CLASS.  IT UPDATES THE ELEMENTS ARRAY AND RETURNS IT, THIS IS STORED IN THE $postArr VARIABLE */
-    //!*!echo "before-validateForm()!*!postArr:" . $postArr['masterStatus']['status'];
     $postArr = $stickyForm->validateForm($_POST, $elementsArr);
-
-
-    //!*!echo "<br>!*!postArr:" . $postArr['masterStatus']['status'];
-    //!*!echo "<br>!*!elementsArr:" . $elementsArr['masterStatus']['status'] . "<br>";
-    //print_r($_POST);
 
     /* THE ELEMENTS ARRAY HAS A MASTER STATUS AREA. IF THERE ARE ANY ERRORS FOUND THE STATUS IS CHANGED TO "ERRORS" FROM THE DEFAULT OF "NOERRORS".  DEPENDING ON WHAT IS RETURNED DEPENDS ON WHAT HAPPENS NEXT.  IN THIS CASE THE RETURN MESSAGE HAS "NO ERRORS" SO WE HAVE NO PROBLEMS WITH OUR VALIDATION AND WE CAN SUBMIT THE FORM */
     if($postArr['masterStatus']['status'] == "noerrors")
@@ -30,8 +24,6 @@ function init()
     }
     else{
       /* IF THERE WAS A PROBLEM WITH THE FORM VALIDATION THEN THE MODIFIED ARRAY ($postArr) WILL BE SENT AS THE SECOND PARAMETER.  THIS MODIFIED ARRAY IS THE SAME AS THE ELEMENTS ARRAY BUT ERROR MESSAGES AND VALUES HAVE BEEN ADDED TO DISPLAY ERRORS AND MAKE IT STICKY */
-      //!*!echo "<br>!*!xxx  postArr:" . $postArr['masterStatus']['status'];
-      //!*!echo "!*!xxx  elementsArr:" . $elementsArr['masterStatus']['status'];
       return getForm("",$postArr);
     }
     
@@ -135,7 +127,6 @@ $elementsArr =
 function addData($post){
   global $elementsArr;  
   /* IF EVERYTHING WORKS ADD THE DATA HERE TO THE DATABASE HERE USING THE $_POST SUPER GLOBAL ARRAY */
-      /**print_r($_POST);/*!*!*/
       require_once('classes/Pdo_methods.php');
 
       $pdo = new PdoMethods();
